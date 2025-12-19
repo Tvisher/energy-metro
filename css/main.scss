@@ -54,13 +54,13 @@ body {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  // overflow: hidden;
-  // height: 100vh;
+  overflow: hidden;
+  height: 100vh;
 
-  // &.video-end {
-  //   overflow: initial;
-  //   height: auto;
-  // }
+  &.video-end {
+    overflow: initial;
+    height: auto;
+  }
 }
 
 .block-scheme {
@@ -84,7 +84,7 @@ body {
   height: 100%;
   z-index: 999;
   transition: all 1.2s ease;
-  display: none;
+  // display: none;
 
   video {
     width: 100%;
