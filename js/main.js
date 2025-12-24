@@ -36,3 +36,39 @@ window.addEventListener('load', () => {
         }
     });
 });
+
+
+
+$(document).ready(function () {
+    $('.type-select').select2({
+        minimumResultsForSearch: -1
+    });
+});
+
+
+
+
+const sliders = document.querySelectorAll('.tab-item__slider');
+const slidersInstance = [];
+sliders.forEach(slider => {
+    const imagesSlider = new Swiper(slider, {
+        speed: 400,
+        spaceBetween: 10,
+        slidesPerView: 1,
+        pagination: {
+            el: slider.querySelector('.swiper-pagination'),
+            type: 'bullets',
+        },
+    });
+    slidersInstance.push(imagesSlider);
+})
+
+
+$('.type-select').on('select2:select', function (e) {
+    const tabId = e.target.value;
+    const prevActiveTab = document.querySelector('.tab-item.active');
+    const currentActiveTab = document.querySelector(`.tab-item[data-item="${tabId}"]`);
+    prevActiveTab.classList.remove('active');
+    currentActiveTab.classList.add('active');
+    slidersInstance[tabId].slideTo(0)
+});
