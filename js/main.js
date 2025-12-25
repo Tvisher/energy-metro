@@ -70,5 +70,5 @@ $('.type-select').on('select2:select', function (e) {
     const currentActiveTab = document.querySelector(`.tab-item[data-item="${tabId}"]`);
     prevActiveTab.classList.remove('active');
     currentActiveTab.classList.add('active');
-    slidersInstance[tabId].slideTo(0)
+    slidersInstance[tabId - 1].slideTo(0)
 });
