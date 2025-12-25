@@ -854,6 +854,32 @@ $index: calc(1vw + 1vh);
   .four-section .half-block {
     gap: 80px
   }
+
+  .escalator_block [data-btn="4"] {
+    left: 50.7%;
+    top: 31%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .third-section {
+    padding: 80px 0;
+  }
+
+  .site-title {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+
+  .half-block .site-text {
+    font-size: 22px;
+  }
+
+  .five-section {
+    .half-block__content {
+      max-width: 50%;
+    }
+  }
 }
 
 @media (max-width: 1300px) {
