@@ -67,24 +67,12 @@ body {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  // overflow: hidden;
-  // height: 100vh;
+  overflow: hidden;
+  height: 100vh;
 
-  // &.video-end {
-  //   overflow: initial;
-  //   height: auto;
-  // }
-}
-
-.block-scheme {
-  width: 681px;
-  height: 570px;
-
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
+  &.video-end {
+    overflow: initial;
+    height: auto;
   }
 }
 
@@ -97,7 +85,7 @@ body {
   height: 100%;
   z-index: 999;
   transition: all 1.2s ease;
-  display: none;
+  // display: none;
 
   video {
     width: 100%;
@@ -111,6 +99,108 @@ body {
     visibility: hidden;
   }
 }
+
+
+.block-scheme {
+  width: 681px;
+  height: 570px;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+$index: calc(1vw + 1vh);
+
+
+
+.escalator_block {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 780px;
+  transform: translate(4%, 11%);
+
+  video {
+    height: 100%;
+  }
+
+
+
+  [data-btn="4"] {
+    left: 51.2%;
+    top: 31%;
+
+    &:hover~ {
+      [data-plus-modal="4"] {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  [data-plus-modal="4"] {
+    left: 53%;
+    top: 13%;
+    transform: translateX(-50%);
+    max-width: clamp(5px, 25vw, 480px);
+  }
+
+
+  [data-btn="5"] {
+    left: 38%;
+    bottom: 38%;
+
+    &:hover~ {
+      [data-plus-modal="5"] {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  [data-plus-modal="5"] {
+    left: 35.3%;
+    bottom: 45%;
+    max-width: clamp(5px, 25vw, 480px);
+  }
+
+
+
+  @media (max-width: 1760px) {
+    transform: translate(14%, 11%);
+  }
+
+  @media (max-width: 1580px) {
+    height: 580px;
+    transform: translate(14%, 17%);
+
+    [data-plus-modal="5"] {
+      bottom: 48%;
+    }
+
+    [data-plus-modal="4"] {
+      top: 11%;
+    }
+
+  }
+}
+
+.five-section {
+  overflow: hidden;
+  position: relative;
+  padding: 100px 0;
+  padding-bottom: 150px;
+
+  .half-block__content {
+    position: relative;
+    z-index: 3;
+  }
+}
+
 
 
 .container {
@@ -171,16 +261,51 @@ body {
 }
 
 
+
 .header {
   padding-top: 35px;
   height: 100vh;
+  // max-height: 960px;
   width: 100vw;
   position: relative;
   overflow: hidden;
   background-image: url(../img/main-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top right;
+
+  .plus-btn {
+    position: absolute;
+    top: 21%;
+    right: 15%;
+    top: calc($index * 6);
+    right: calc($index * 11);
+
+    &:hover~ {
+      [data-plus-modal="0"] {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .plus-modal {
+    top: calc($index * 9);
+    right: calc($index * 8);
+    max-width: 480px;
+  }
+}
+
+.plus-modal {
+  span {
+    margin-bottom: clamp(5px, 0.52vw, 10px);
+    display: block;
+    color: #FFF;
+    font-size: clamp(5px, 1.45vw, 28px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%;
+  }
 }
 
 
@@ -299,11 +424,11 @@ body {
 
 .plus-modal {
   position: absolute;
-  padding: 16px;
-  border-radius: 16px;
+  padding: clamp(5px, 0.83vw, 16px);
+  border-radius: clamp(5px, 0.83vw, 16px);
   background: #F50;
   color: #FFF;
-  font-size: 22px;
+  font-size: clamp(5px, 1.14vw, 22px);
   font-weight: 400;
   line-height: 120%;
   transition: all .3s ease-in-out;
@@ -676,6 +801,7 @@ body {
 
 
 .tab-item__slider {
+  display: none;
   margin-top: 32px;
 
   .swiper-slide {
@@ -707,6 +833,26 @@ body {
 
   &.swiper-pagination-bullet-active {
     background-color: #F50 !important;
+  }
+}
+
+@media (max-width: 1580px) {
+  .site-title {
+    font-size: 56px;
+    margin-bottom: 40px;
+  }
+
+  .half-block .site-text {
+    font-size: 26px;
+  }
+
+  .four-section .half-block__image {
+    width: 500px;
+    height: 500px;
+  }
+
+  .four-section .half-block {
+    gap: 80px
   }
 }
 
@@ -751,6 +897,10 @@ body {
 
 
 @media (max-width: 576px) {
+  .tab-item__slider {
+    display: block;
+  }
+
   .mobile-images-block {
     display: block;
   }
