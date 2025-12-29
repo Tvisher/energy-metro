@@ -72,3 +72,13 @@ $('.type-select').on('select2:select', function (e) {
     currentActiveTab.classList.add('active');
     slidersInstance[tabId - 1].slideTo(0)
 });
+
+
+
+document.querySelector('#totopbtn').addEventListener('click', (e) => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+    });
+})
