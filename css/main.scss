@@ -1107,6 +1107,14 @@ $index: calc(1vw + 1vh);
 
 
 @media (max-width: 576px) {
+  .escalator_block [data-plus-modal="4"] {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 42%;
+    max-width: 90vw;
+    width: 100%;
+  }
+
   .footer-social__link {
     width: 40px;
     height: 40px;
@@ -1234,6 +1242,6 @@ $index: calc(1vw + 1vh);
 
   .escalator_block [data-plus-modal="5"] {
     bottom: 28%;
-    left: 14.3%;
+    left: 0%;
   }
 }
