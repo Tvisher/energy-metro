@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="./css/select2.min.css" />
   <link rel="stylesheet" href="./css/fancybox.css" />
   <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/aos.css" />
   <link rel="stylesheet" href="./css/main.min.css" />
 </head>
 
@@ -45,8 +46,8 @@
           <img src="./img/logo.svg" alt="" />
         </a>
         <div class="header-content">
-          <h1 class="header-content__title">Энергия метро</h1>
-          <p class="header-content__descr">
+          <h1 class="header-content__title" data-aos="fade-right">Энергия метро</h1>
+          <p class="header-content__descr" data-aos="fade-right" data-aos-delay="400">
             Как устроена энергосистема Московского метрополитена
           </p>
         </div>
@@ -63,7 +64,7 @@
     </header>
     <section class="second-section">
       <div class="container">
-        <div class="site-text">
+        <div class="site-text" data-aos="fade-right">
           В&nbsp;2025 году Московскому метрополитену исполнилось 90&nbsp;лет. За&nbsp;его мраморными залами
           и&nbsp;современными поездами скрывается колоссальная энергосистема&nbsp;&mdash; невидимый механизм, без
           которого невозможны движение составов и&nbsp;работа подземного города. Она питает все&nbsp;&mdash;
@@ -79,11 +80,11 @@
       <div class="container">
         <div class="half-block">
           <div class="half-block__content">
-            <h2 class="site-title">
+            <h2 class="site-title" data-aos="fade-right">
               Как устроена<br />
               энергосистема метро
             </h2>
-            <div class="site-text">
+            <div class="site-text" data-aos="fade-right">
               Система энергоснабжения метро связана с&nbsp;общегородской сетью. Она обеспечивает движение поездов
               и&nbsp;эскалаторов, освещение тоннелей и&nbsp;станций, работу турникетов и&nbsp;торговых автоматов.
               <br>
@@ -93,7 +94,7 @@
               сердцем подземного города.
             </div>
           </div>
-          <div class="half-block__image block-scheme">
+          <div class="half-block__image block-scheme" data-aos="zoom-in">
             <video muted autoplay playsinline loop preload="auto" poster="./img/tunnel_import.jpg">
               <source src="./files/metro_map.mp4" type="video/mp4">
             </video>
@@ -104,22 +105,22 @@
     <section class="four-section">
       <div class="container">
         <div class="half-block">
-          <div class="half-block__image">
+          <div class="half-block__image" data-aos="zoom-in">
             <img src="./img/train-whells.svg" alt="" />
-            <div class="plus-btn" data-btn="1"></div>
-            <div class="plus-btn" data-btn="2"></div>
-            <div class="plus-btn" data-btn="3"></div>
+            <div class="plus-btn" data-btn="1" data-aos="zoom-in" data-aos-delay="300"></div>
+            <div class="plus-btn" data-btn="2" data-aos="zoom-in" data-aos-delay="300"></div>
+            <div class="plus-btn" data-btn="3" data-aos="zoom-in" data-aos-delay="300"></div>
             <div class="plus-modal" data-plus-modal="1">Защитный <br> кожух</div>
             <div class="plus-modal" data-plus-modal="2">Токоприемник <br> поезда</div>
             <div class="plus-modal" data-plus-modal="3">Контактный рельс <br> с напряжением 825 В</div>
 
           </div>
           <div class="half-block__content">
-            <h2 class="site-title">
+            <h2 class="site-title" data-aos="fade-left">
               Как энергия поступает <br />
               в двигатель поезда
             </h2>
-            <div class="site-text">
+            <div class="site-text" data-aos="fade-left">
               В&nbsp;метро электричество поступает к&nbsp;поезду через третий рельс&nbsp;&mdash; контактный. Обычно
               он&nbsp;скрыт под платформой, но&nbsp;на&nbsp;открытых участках его можно заметить сбоку от&nbsp;путей.
               В&nbsp;тоннелях обычно тесно и&nbsp;нет места для подвесной контактной сети&nbsp;&mdash; компактный
@@ -137,8 +138,8 @@
       <div class="container">
         <div class="half-block">
           <div class="half-block__content">
-            <h2 class="site-title">Как метро сберегает энергию</h2>
-            <div class="site-text">
+            <h2 class="site-title" data-aos="fade-right">Как метро сберегает энергию</h2>
+            <div class="site-text" data-aos="fade-right">
               Московский метрополитен внедряет десятки технологий, которые позволяют тратить меньше электричества
               и&nbsp;делают поездки комфортнее. Например, новые эскалаторы оснащены частотными приводами: двигатели
               плавно разгоняются и&nbsp;замедляются, что в&nbsp;совокупности с&nbsp;другими технологиями экономит
@@ -146,12 +147,12 @@
               механизмов.
             </div>
           </div>
-          <div class="half-block__image escalator_block">
+          <div class="half-block__image escalator_block" data-aos="fade-in">
             <video muted autoplay playsinline loop preload="auto" poster="./img/escalator.webp">
               <source src="./files/escalator.mp4" type="video/mp4">
             </video>
 
-            <div class="plus-btn" data-btn="4"></div>
+            <div class="plus-btn" data-aos="zoom-in" data-aos-delay="400" data-btn="4"></div>
             <div class="plus-modal" data-plus-modal="4">
               <span>Энергосберегающие лампы</span>
               <p>
@@ -159,7 +160,7 @@
               </p>
             </div>
 
-            <div class="plus-btn" data-btn="5"></div>
+            <div class="plus-btn" data-aos="zoom-in" data-aos-delay="400" data-btn="5"></div>
             <div class="plus-modal" data-plus-modal="5">
               <span>Новый эскалатор</span>
               <p>
@@ -175,11 +176,11 @@
       <div class="container">
         <div class="half-block">
           <div class="half-block__content">
-            <h2 class="site-title">
+            <h2 class="site-title" data-aos="fade-right">
               Кто контролирует <br>
               электроснабжение подземки
             </h2>
-            <div class="site-text">
+            <div class="site-text" data-aos="fade-right">
               Механизмами и&nbsp;технологиями энергосистемы занимается команда специалистов&nbsp;&mdash; Служба
               электроснабжения Московского метрополитена.
             </div>
@@ -187,13 +188,13 @@
         </div>
         <div class="tabs-wrapper">
           <div class="tabs-btns">
-            <div class="tabs-btn active" data-tab-btn="1">Сотрудники</div>
-            <div class="tabs-btn" data-tab-btn="2">Освещение</div>
-            <div class="tabs-btn" data-tab-btn="3">Подстанции</div>
-            <div class="tabs-btn" data-tab-btn="4">Жизнеобеспечение</div>
+            <div class="tabs-btn active" data-aos="fade-right" data-aos-delay="" data-tab-btn="1">Сотрудники</div>
+            <div class="tabs-btn" data-aos="fade-right" data-aos-delay="200" data-tab-btn="2">Освещение</div>
+            <div class="tabs-btn" data-aos="fade-right" data-aos-delay="400" data-tab-btn="3">Подстанции</div>
+            <div class="tabs-btn" data-aos="fade-right" data-aos-delay="600" data-tab-btn="4">Жизнеобеспечение</div>
           </div>
           <div class="tabs-content">
-            <div class="mobile-images-block">
+            <div class="mobile-images-block" data-aos="zoom-in">
               <select class="type-select">
                 <option value="1">Сотрудники</option>
                 <option value="2">Освещение</option>
@@ -202,9 +203,10 @@
               </select>
             </div>
             <div class="tab-item active" data-item="1">
-              <div class="tab-item__name">Сотрудники</div>
-              <div class="tab-item__descr">Сегодня в Московском метрополитене работают более 60 тыс. человек.</div>
-              <div class="tab-item__images">
+              <div class="tab-item__name" data-aos="fade-right">Сотрудники</div>
+              <div class="tab-item__descr" data-aos="fade-right">Сегодня в Московском метрополитене работают более 60
+                тыс. человек.</div>
+              <div class="tab-item__images" data-aos="fade-in">
                 <div class="tab-item__image" data-fancybox="gal-1" data-src="./img/cards/Сотрудники/image-1.jpg">
                   <img loading="lazy" src="./img/small-cards/Сотрудники/image-1.jpg" alt="">
                 </div>
@@ -524,7 +526,7 @@
     </section>
     <section class="seven-section">
       <div class="container">
-        <div class="seven-section__video">
+        <div class="seven-section__video" data-aos="zoom-in">
           <div class="seven-section__video-wrapper">
             <video class="ex-video" src="./files/energy-video.mp4" width="100%" controls
               poster="./img/video-poster.jpg">
@@ -536,8 +538,8 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-social">
-          <div class="footer-social__name">Поделиться</div>
-          <div class="footer-social__links">
+          <div class="footer-social__name" data-aos="zoom-in">Поделиться</div>
+          <div class="footer-social__links" data-aos="zoom-in">
             <a href="https://t.me/energyplusmedia" target="_blank" class="footer-social__link">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="mask0_1143_11318" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
@@ -602,7 +604,7 @@
             </a>
           </div>
         </div>
-        <div class="footer__btns">
+        <div class="footer__btns" data-aos="zoom-in">
           <div href="" class="footer__btn" id="totopbtn">
             <span>Вернуться в начало</span>
             <span class="ico">
@@ -628,6 +630,7 @@
     </footer>
   </main>
 
+  <script src="./js/aos.js"></script>
   <script src="./js/jquery.min.js"></script>
   <script src="./js/select2.min.js"></script>
   <script src="./js/fancybox.umd.js"></script>
